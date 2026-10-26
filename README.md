@@ -1,9 +1,27 @@
 # SegmentIQ: A Comparative Study of Clustering Algorithms for Customer Segmentation
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Shwetapatil13%2FSegmentIQ-181717?logo=github)](https://github.com/Shwetapatil13/SegmentIQ)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white)](https://python.org)
+[![Tests Passing](https://img.shields.io/badge/pytest-29%20passed-brightgreen?logo=pytest)](file:///tests)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.40%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+
+---
+
+### 🌐 Live Web Application & Instant Deployment
+
+* 🚀 **1-Click Cloud Deployment:** [![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py)  
+  *(Click the badge above to automatically open Streamlit Cloud with your repository pre-filled, then click **Deploy**!)*
+* 🔗 **Cloud Web App URL:** [**Open SegmentIQ on Streamlit Cloud**](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py)
+* 💻 **Local Live Server:** [**http://localhost:8501**](http://localhost:8501) *(Running currently on your local machine)*
+
+---
+
 **Academic Level:** Third Year Computer Engineering Mini-Project (Assignment 5)  
 **Dataset:** Mall Customer Segmentation Data (`Mall_Customers.csv`, 200 records, 5 features)  
 **Algorithms Evaluated:** K-Means Partitioning, Hierarchical Agglomerative (Ward Linkage), and DBSCAN  
 **Architecture:** Modular Python package (`src/`), Comprehensive Test Suite (`tests/`), Interactive Streamlit Dashboard (`app.py`), Executed Jupyter Notebook (`notebooks/`), and Formal Report (`reports/`).
+
 
 ---
 
