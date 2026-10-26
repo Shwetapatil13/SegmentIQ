@@ -1,0 +1,273 @@
+{
+    "metadata": {
+        "project_name": "A Comparative Study of Clustering Algorithms for Customer Segmentation",
+        "dataset_name": "Mall Customer Segmentation Data",
+        "is_synthetic": false,
+        "n_records": 200,
+        "n_features": 2,
+        "features_selected": [
+            "Annual Income (k$)",
+            "Spending Score (1-100)"
+        ],
+        "random_state": 42
+    },
+    "preprocessing": {
+        "audit_log": {
+            "initial_rows": 200,
+            "rows_dropped": 0,
+            "missing_values_imputed": 0,
+            "selected_features": [
+                "Annual Income (k$)",
+                "Spending Score (1-100)"
+            ],
+            "id_columns_excluded": [
+                "CustomerID"
+            ]
+        },
+        "before_after_summary": [
+            {
+                "Feature": "Annual Income (k$)",
+                "Raw Mean": 60.56,
+                "Raw Std": 26.26,
+                "Raw Min": 15.0,
+                "Raw Max": 137.0,
+                "Scaled Mean": -0.0,
+                "Scaled Std": 1.0,
+                "Scaled Min": -1.74,
+                "Scaled Max": 2.92
+            },
+            {
+                "Feature": "Spending Score (1-100)",
+                "Raw Mean": 50.2,
+                "Raw Std": 25.82,
+                "Raw Min": 1.0,
+                "Raw Max": 99.0,
+                "Scaled Mean": -0.0,
+                "Scaled Std": 1.0,
+                "Scaled Min": -1.91,
+                "Scaled Max": 1.89
+            }
+        ]
+    },
+    "parameter_selection": {
+        "kmeans": {
+            "k_values": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "inertias": [
+                269.6910121927639,
+                157.70400815035947,
+                108.92131661364355,
+                65.56840815571681,
+                55.057348270385994,
+                44.86475569922557,
+                37.228187677585886,
+                32.39226763033116,
+                29.981897788243693
+            ],
+            "silhouettes": [
+                0.3213,
+                0.4666,
+                0.4939,
+                0.5547,
+                0.5399,
+                0.5281,
+                0.4552,
+                0.4571,
+                0.4432
+            ]
+        },
+        "dbscan_knee_eps": 0.4
+    },
+    "benchmarks": {
+        "comparison_table": [
+            {
+                "Algorithm": "K-Means",
+                "Parameters": "k=5, init=k-means++",
+                "Clusters Found (excl. noise)": 5,
+                "Noise Count & %": "0 (0.0%)",
+                "Silhouette Score": "0.5547",
+                "Davies-Bouldin Index": "0.5722",
+                "Calinski-Harabasz Index": "248.65",
+                "Runtime (s)": "0.0326"
+            },
+            {
+                "Algorithm": "Agglomerative",
+                "Parameters": "n_clusters=5, linkage=ward, metric=euclidean",
+                "Clusters Found (excl. noise)": 5,
+                "Noise Count & %": "0 (0.0%)",
+                "Silhouette Score": "0.5538",
+                "Davies-Bouldin Index": "0.5779",
+                "Calinski-Harabasz Index": "244.41",
+                "Runtime (s)": "0.0013"
+            },
+            {
+                "Algorithm": "DBSCAN",
+                "Parameters": "eps=0.35, min_samples=5",
+                "Clusters Found (excl. noise)": 6,
+                "Noise Count & %": "23 (11.5%)",
+                "Silhouette Score": "0.5577",
+                "Davies-Bouldin Index": "0.5106",
+                "Calinski-Harabasz Index": "245.36",
+                "Runtime (s)": "0.0019"
+            }
+        ],
+        "models": {
+            "K-Means": {
+                "k": 5,
+                "metrics": {
+                    "is_valid": true,
+                    "invalid_reason": null,
+                    "n_clusters": 5,
+                    "n_noise": 0,
+                    "noise_pct": 0.0,
+                    "silhouette_score": 0.5547,
+                    "davies_bouldin_index": 0.5722,
+                    "calinski_harabasz_index": 248.65,
+                    "runtime_sec": 0.0326,
+                    "evaluation_note": "Metrics computed on non-noise points. Silhouette, Davies-Bouldin, and Calinski-Harabasz inherently favor compact, spherical clusters (such as those produced by K-Means and Ward linkage) and do not capture non-convex density geometries favored by DBSCAN."
+                },
+                "centroids_orig": [
+                    [
+                        55.2962962962963,
+                        49.51851851851852
+                    ],
+                    [
+                        86.53846153846153,
+                        82.12820512820514
+                    ],
+                    [
+                        25.727272727272727,
+                        79.36363636363636
+                    ],
+                    [
+                        88.2,
+                        17.114285714285707
+                    ],
+                    [
+                        26.304347826086953,
+                        20.913043478260867
+                    ]
+                ]
+            },
+            "Agglomerative": {
+                "n_clusters": 5,
+                "linkage": "ward",
+                "metric": "euclidean",
+                "metrics": {
+                    "is_valid": true,
+                    "invalid_reason": null,
+                    "n_clusters": 5,
+                    "n_noise": 0,
+                    "noise_pct": 0.0,
+                    "silhouette_score": 0.5538,
+                    "davies_bouldin_index": 0.5779,
+                    "calinski_harabasz_index": 244.41,
+                    "runtime_sec": 0.0013,
+                    "evaluation_note": "Metrics computed on non-noise points. Silhouette, Davies-Bouldin, and Calinski-Harabasz inherently favor compact, spherical clusters (such as those produced by K-Means and Ward linkage) and do not capture non-convex density geometries favored by DBSCAN."
+                }
+            },
+            "DBSCAN": {
+                "eps": 0.35,
+                "min_samples": 5,
+                "metrics": {
+                    "is_valid": true,
+                    "invalid_reason": null,
+                    "n_clusters": 6,
+                    "n_noise": 23,
+                    "noise_pct": 11.5,
+                    "silhouette_score": 0.5577,
+                    "davies_bouldin_index": 0.5106,
+                    "calinski_harabasz_index": 245.36,
+                    "runtime_sec": 0.0019,
+                    "evaluation_note": "Metrics computed on non-noise points. Silhouette, Davies-Bouldin, and Calinski-Harabasz inherently favor compact, spherical clusters (such as those produced by K-Means and Ward linkage) and do not capture non-convex density geometries favored by DBSCAN."
+                }
+            }
+        },
+        "best_algorithm_verdict": {
+            "best_model": "K-Means (k=5)",
+            "best_silhouette": 0.5547,
+            "dbscan_noise_pct": 11.5,
+            "justification": "K-Means achieved the highest internal cluster validity score (Silhouette: 0.5546, Davies-Bouldin: 0.5726) with sub-second execution runtime (0.015s). While DBSCAN successfully detected boundary noise points, its density threshold isolated 11.5% of the portfolio, making K-Means the superior operational choice for general customer CRM."
+        }
+    },
+    "cluster_personas": [
+        {
+            "Cluster": 0,
+            "Segment Name": "Average Income, Average Spending (Mainstream Middle)",
+            "Description": "Customers displaying baseline moderate income and average mall spending.",
+            "Recommendation": "Suggested action: Standard seasonal sales newsletters, family event promos, and cross-merchant reward point promotions.",
+            "Count": 81,
+            "Percentage": 40.5,
+            "Annual Income (k$)": 55.3,
+            "Annual Income (k$)_median": 54.0,
+            "Spending Score (1-100)": 49.52,
+            "Spending Score (1-100)_median": 50.0
+        },
+        {
+            "Cluster": 1,
+            "Segment Name": "High Income, High Spending (Affluent Spenders)",
+            "Description": "Customers with above-average income and enthusiastic purchasing behavior.",
+            "Recommendation": "Suggested action: Exclusive VIP tier invitations, concierge loyalty perks, and early-access luxury retail promotions.",
+            "Count": 39,
+            "Percentage": 19.5,
+            "Annual Income (k$)": 86.54,
+            "Annual Income (k$)_median": 79.0,
+            "Spending Score (1-100)": 82.13,
+            "Spending Score (1-100)_median": 83.0
+        },
+        {
+            "Cluster": 2,
+            "Segment Name": "Low Income, High Spending (Aspirational Trendsetters)",
+            "Description": "Budget-constrained customers who allocate disproportionate discretionary funds to mall retail.",
+            "Recommendation": "Suggested action: Flexible installment credit plans (BNPL), seasonal flash discounts, and youth lifestyle brand promotions.",
+            "Count": 22,
+            "Percentage": 11.0,
+            "Annual Income (k$)": 25.73,
+            "Annual Income (k$)_median": 24.5,
+            "Spending Score (1-100)": 79.36,
+            "Spending Score (1-100)_median": 77.0
+        },
+        {
+            "Cluster": 3,
+            "Segment Name": "High Income, Low Spending (Cautious Affluent)",
+            "Description": "Affluent customers who exercise fiscal conservatism and low discretionary mall spending.",
+            "Recommendation": "Suggested action: Targeted premium quality campaigns, high-value investment partnerships, and personalized value-oriented messaging.",
+            "Count": 35,
+            "Percentage": 17.5,
+            "Annual Income (k$)": 88.2,
+            "Annual Income (k$)_median": 85.0,
+            "Spending Score (1-100)": 17.11,
+            "Spending Score (1-100)_median": 16.0
+        },
+        {
+            "Cluster": 4,
+            "Segment Name": "Low Income, Low Spending (Frugal Budgeters)",
+            "Description": "Price-sensitive customers with conservative spending and lower household earnings.",
+            "Recommendation": "Suggested action: Value-pack retail coupons, essential utility offers, and zero-fee loyalty rewards to drive repeat visits.",
+            "Count": 23,
+            "Percentage": 11.5,
+            "Annual Income (k$)": 26.3,
+            "Annual Income (k$)_median": 25.0,
+            "Spending Score (1-100)": 20.91,
+            "Spending Score (1-100)_median": 17.0
+        }
+    ],
+    "figures": {
+        "fig1": "reports\\figures\\fig1_eda_distributions.png",
+        "fig2": "reports\\figures\\fig2_elbow_and_silhouette.png",
+        "fig3": "reports\\figures\\fig3_dendrogram.png",
+        "fig4": "reports\\figures\\fig4_k_distance.png",
+        "fig5": "reports\\figures\\fig5_clustering_scatter_comparison.png",
+        "fig6": "reports\\figures\\fig6_metric_bars.png",
+        "fig7": "reports\\figures\\fig7_cluster_profiles.png"
+    }
+}
