@@ -5,15 +5,19 @@
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Shwetapatil13%2FSegmentIQ-181717?logo=github)](https://github.com/Shwetapatil13/SegmentIQ)
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Tests Status](https://img.shields.io/badge/pytest-29%20passed-brightgreen?logo=pytest)](file:///tests)
+[![Tests Status](https://img.shields.io/badge/pytest-29%20passed-brightgreen?logo=pytest)](https://github.com/Shwetapatil13/SegmentIQ/tree/main/tests)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-1.40%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4%2B-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **An End-to-End Unsupervised Machine Learning Framework for Retail & Banking Customer Intelligence**  
-*Third Year Computer Engineering Mini-Project • Academic Assignment 5*
+*Third Year B. Tech Computer Engineering Mini-Project • [2615PE31]: Data Warehousing and Mining Lab*  
+**Pune Institute of Computer Technology (PICT), Pune • Academic Year 2026–27**  
 
-[🚀 Launch Cloud App](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py) • [💻 Local Live Demo (Port 8501)](http://localhost:8501) • [📊 Benchmark Metrics](#-comparative-benchmark-results) • [👥 Personas](#-discovered-customer-personas) • [🛠️ PowerShell Setup](#-setup--execution-guide-windows-powershell) • [🎓 Viva Prep](#-oral-viva-voce--evaluation-defense-cheat-sheet)
+**Team Members:** **Shweta Patil** (Roll No: 31363) • **Samruddhi Pharakate** (Roll No: 31365)  
+**Faculty Guide:** **Prof. Urmila Pawar**  
+
+[🚀 Launch Cloud App](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py) • [💻 Local Web Dashboard (Port 8501)](http://localhost:8501) • [📄 Mini-Project Report (PDF)](reports/SegmentIQ_Mini_Project_Report.pdf) • [📊 Benchmark Metrics](#-key-benchmark-results-single-source-of-truth) • [👥 Discovered Personas](#-discovered-customer-personas) • [🛠️ Execution Guide](#-setup--execution-guide-windows-powershell)
 
 </div>
 
@@ -21,11 +25,22 @@
 
 ## 🌐 Instant Cloud & Local Access
 
-| Platform | Access Link | Status |
+| Platform | Access Link | Status & How to Run |
 | :--- | :--- | :--- |
-| **Streamlit Community Cloud** | [![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py) | **1-Click Live Deployment (Repo Pre-configured)** |
-| **Local Web Dashboard** | [**http://localhost:8501**](http://localhost:8501) | **Running Locally via Streamlit Daemon** |
-| **GitHub Repository** | [**github.com/Shwetapatil13/SegmentIQ**](https://github.com/Shwetapatil13/SegmentIQ) | **Main Branch • Production-Ready** |
+| **Streamlit Community Cloud** | [**🚀 1-Click Cloud Deploy / Launch**](https://share.streamlit.io/deploy?repository=Shwetapatil13/SegmentIQ&branch=main&mainModule=app.py) | Click to deploy & run free on Streamlit Cloud (Auto-configured with `requirements.txt`) |
+| **Local Web Dashboard** | [**💻 http://localhost:8501**](http://localhost:8501) | Run `streamlit run app.py` in your terminal, then click the link to view |
+| **Mini Project Report (PDF)** | [**📄 Download PDF Report**](reports/SegmentIQ_Mini_Project_Report.pdf) | Formal 9-page academic report in LaTeX/PICT format |
+| **Mini Project Report (DOCX)**| [**📝 Download DOCX Report**](reports/SegmentIQ_Mini_Project_Report.docx)| Editable Word report for academic submission |
+| **GitHub Repository** | [**github.com/Shwetapatil13/SegmentIQ**](https://github.com/Shwetapatil13/SegmentIQ) | Main Branch • Verified CI Tests Passed |
+
+### ⚡ Quick 10-Second Local Run:
+```bash
+git clone https://github.com/Shwetapatil13/SegmentIQ.git
+cd SegmentIQ
+pip install -r requirements.txt
+streamlit run app.py
+```
+> Once running, the dashboard opens automatically at [**http://localhost:8501**](http://localhost:8501).
 
 ---
 
